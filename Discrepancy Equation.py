@@ -1,11 +1,13 @@
 import numpy as np
-#TO DO: Replace A, B and M with the picture matrixes when adding this part to the main code.
+#TO DO: 
+#Replace A, B and M with the picture matrixes when adding this part to the main code.
+#If we don't use 1 to determine masked points, edit the if statements to reflect that.
 
 #Matrix of the picture without a mask applied
 A=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 #Matrix of the picture after it has been repaired
 B=np.arange(9).reshape(3,3)
-#Matrix of just the mask 
+#Matrix of just the mask. Matrix elements that are equal to 1 are considered masked points.
 M=[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 
 
@@ -21,7 +23,6 @@ I1=0
 I2=0
 
 #Discrepancy score program
-
 #This loop calculates the sum in the numerator of the discrepancy equation
 for i in range(0,h):
     for j in range(0,v):
