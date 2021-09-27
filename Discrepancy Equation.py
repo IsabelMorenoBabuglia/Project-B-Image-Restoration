@@ -1,4 +1,5 @@
 import numpy as np
+#TO DO: Replace A, B and M with the picture matrixes when adding this part to the main code.
 
 #Matrix of the picture without a mask applied
 A=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -21,7 +22,7 @@ I2=0
 
 #Discrepancy score program
 
-#This loop calculates the sum in the numerator of the discrepancy equation.
+#This loop calculates the sum in the numerator of the discrepancy equation
 for i in range(0,h):
     for j in range(0,v):
         #If statement ensures that only points that had the mask are considered in the equation
@@ -39,7 +40,8 @@ for i in range(0,h):
 #Define the denominator in the discrepancy equation
 omega=np.sqrt(1/(n-1)*I2**2)
 
-#Calculate chi value.
+#Calculate chi value
 X=np.sqrt(I1**2/(n*omega**2))
 
+#Print chi squared
 print(X**2)
